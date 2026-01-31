@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url("../images/background/cc92c00e77987fbb92422660c7bd27edcefc669d.jpg");
+    font-family: 'Roboto', sans-serif;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.site-header {
+    max-width: 990px;
+    margin: 24px auto 20px;
+    overflow-x: auto;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hall-wrapper {
+    max-width: 990px;
+    height: 573px;
+    margin: 0 auto;
+    background: #f3ebe1;
+}
+
+.hall-info {
+    padding: 15px;
+}
+
+.movie-title {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.session-time {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 7px;
+}
+
+.hall-name {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.black-hall {
+    width: 100%;
+    background-color: #171D24;
+    background-image: url("../images/1b750c2b29f8ba5cba369ede3f3f1d7b48ec671a.png");
+    background-repeat: no-repeat;
+    background-position: center 20px;
+    background-size: 284px 20px;
+    padding-top: 40px;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.hall-screen {
+    margin: 20px auto 10px;
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+    border-bottom: 1px solid #aaa;
+    width: 60%;
+}
+
+
+.hall-scheme {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 6px;
+    justify-content: center;
+    margin: 20px auto;
+    width: fit-content;
+}
+
+.seat {
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    cursor: pointer;
+    border: 1px solid #525252;
+    border-radius: 4px;
+}
+
+.seat.vip {
+    background: #F9953A;
+}
+
+.seat.busy {
+    background: #171D24;
+    cursor: not-allowed;
+}
+
+.seat.selected {
+    background: #25C4CE;
+    filter: drop-shadow(0 0 4px #16A6AF);
+}
+
+.legend {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-auto-flow: column;
+    gap: 12px 32px;
+    justify-content: center;
+    margin: 30px 0;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.legend > div {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.legend .seat {
+    margin-right: 6px;
+}
+
+.book-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 40px;
+    background: #16a6af;
+    border-radius: 3px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 3px 3px rgba(0,0,0,.24);
+}

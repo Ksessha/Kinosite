@@ -1,0 +1,182 @@
+body {
+    background-image: url("../images/background/cc92c00e77987fbb92422660c7bd27edcefc669d.jpg");
+    font-family: 'Roboto', sans-serif;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.site-header {
+    max-width: 990px;
+    margin: 24px auto 20px;
+    overflow-x: auto;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.card-wrapper {
+    margin: 0 auto;
+    width: 990px;
+    position: relative;
+}
+
+.card {
+    margin: 0 auto;  
+    width: 100%;
+    background: #F1EBE6F2;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border: none;
+    padding: 0;
+    position: relative;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-image: url("../images/9abf83e43a7d2276ffb106619685760e7150885a.png");
+    background-repeat: repeat-x;
+    background-size: contain;
+    z-index: 2;
+}
+
+.card-header {
+    color: #C56A01;
+    border: none;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 1.5rem 1.25rem 1.5rem;
+    margin: 0;
+}
+
+/* .card-header::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background-image: url("../images/9abf83e43a7d2276ffb106619685760e7150885a.png");
+    background-repeat: repeat-x;
+    background-size: contain;
+} */
+
+.card-body {
+    padding: 25px;
+    border: none;
+    position: relative;
+}
+
+/* .card-body::before {
+    content: "";
+    display: block;
+    height: 3px;
+    background-image: url("../images/6d2fbefa67f781c2dbfe1f022c7c539d18371a5d.png");
+    background-repeat: repeat-x;
+    background-size: contain;
+} */
+
+.ticket-details{
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+}
+.card-button {
+    text-align: center;
+    padding: 20px;
+    border: none;
+    position: relative;
+}
+
+.card-button button {
+    width: 337px;
+    height: 40px;
+    background: #16A6AF;
+    color: #FFF;
+    font-size: 14px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.card-button button:hover {
+    background: #128a92;
+}
+
+.text-buttom {
+    margin: 30px 0;
+}
+.text-buttom p {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 0 15px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-image: url("../images/6d2fbefa67f781c2dbfe1f022c7c539d18371a5d.png");
+    background-repeat: repeat-x;
+    background-size: contain;
+    z-index: 2;
+}
+
+.card::before {
+    background-color: #C56A01 !important;
+    opacity: 1 !important;
+}
+
+.card-header::after {
+    background-color: #C56A01 !important;
+    opacity: 1 !important;
+}
+
+.card-body::before {
+    background-color: #C56A01 !important;
+    opacity: 1 !important;
+}
+
+.card::after {
+    background-color: #C56A01 !important;
+    opacity: 1 !important;
+}
+
+@media (max-width: 576px) {
+    .card-wrapper {
+        width: 100%;
+    }
+    
+    .card {
+        width: 100% !important;
+        height: auto !important;
+    }
+    
+    .card-body {
+        padding: 15px !important;
+    }
+
+    #ticket-content h3 {
+        font-size: 20px;
+    }
+
+    .ticket-details {
+        font-size: 14px;
+    }
+}

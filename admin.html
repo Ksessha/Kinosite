@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Администрирование — ИДЁМВКИНО</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<header class="admin-header">
+    <nav class="navbar">
+        <div class="container">
+            <svg width="209" height="36" viewBox="0 0 209 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.82715 21.1006L14.5098 5.84375H20.3369V30.0156H14.5098V14.7754L5.82715 30.0156H0V5.84375H5.82715V21.1006ZM43.5293 25.5332V30.0156H26.5459V25.5332H43.5293ZM28.4717 25.5332V35.9424H23.0762L22.6777 25.5332H28.4717ZM47.4971 25.5332L46.8828 35.959H41.6533V25.5332H47.4971ZM40.9893 5.84375V10.3428H28.8535V5.84375H40.9893ZM44.9072 5.84375V30.0156H39.1133V5.84375H44.9072ZM28.4717 5.84375H34.2822L33.5684 15.7549C33.4466 17.4482 33.2529 18.9202 32.9873 20.1709C32.7217 21.4215 32.4062 22.5007 32.041 23.4082C31.6758 24.3158 31.2773 25.096 30.8457 25.749C30.4141 26.402 29.9603 26.972 29.4844 27.459C29.0195 27.946 28.5547 28.3887 28.0898 28.7871C27.625 29.1855 27.1768 29.5951 26.7451 30.0156H23.209V25.5332H24.3711C24.7142 25.2897 25.0573 24.9632 25.4004 24.5537C25.7546 24.1331 26.0866 23.5632 26.3965 22.8438C26.7064 22.1243 26.9775 21.1891 27.21 20.0381C27.4424 18.887 27.6195 17.4593 27.7412 15.7549L28.4717 5.84375ZM66.1406 25.5332V30.0156H53.2578V25.5332H66.1406ZM55.333 5.84375V30.0156H49.5059V5.84375H55.333ZM64.4805 15.4395V19.7725H53.2578V15.4395H64.4805ZM66.1904 5.84375V10.3428H53.2578V5.84375H66.1904ZM51.498 2.20801C51.498 1.58822 51.7471 1.06803 52.2451 0.647461C52.7432 0.21582 53.3298 0 54.0049 0C54.6911 0 55.2777 0.21582 55.7646 0.647461C56.2627 1.06803 56.5117 1.58822 56.5117 2.20801C56.5117 2.8278 56.2627 3.35352 55.7646 3.78516C55.2777 4.20573 54.6911 4.41602 54.0049 4.41602C53.3298 4.41602 52.7432 4.20573 52.2451 3.78516C51.7471 3.35352 51.498 2.8278 51.498 2.20801ZM60.1143 2.20801C60.1143 1.58822 60.3633 1.06803 60.8613 0.647461C61.3594 0.21582 61.946 0 62.6211 0C63.3073 0 63.8939 0.21582 64.3809 0.647461C64.8789 1.06803 65.1279 1.58822 65.1279 2.20801C65.1279 2.8278 64.8789 3.35352 64.3809 3.78516C63.8939 4.20573 63.3073 4.41602 62.6211 4.41602C61.946 4.41602 61.3594 4.20573 60.8613 3.78516C60.3633 3.35352 60.1143 2.8278 60.1143 2.20801ZM71.4199 5.84375H76.168L81.5635 22.6611L86.959 5.84375H91.707L83.4893 30.0156H79.6377L71.4199 5.84375ZM68.5312 5.84375H73.4453L74.3584 24.3711V30.0156H68.5312V5.84375ZM89.6816 5.84375H94.6123V30.0156H88.7686V24.3711L89.6816 5.84375ZM107.877 18.0791H100.373L100.34 17.1826H106.516C107.977 17.1826 109.2 16.9945 110.185 16.6182C111.181 16.2419 111.928 15.6663 112.426 14.8916C112.924 14.1169 113.173 13.1429 113.173 11.9697C113.173 10.8076 112.907 9.83919 112.376 9.06445C111.856 8.28971 111.076 7.70866 110.035 7.32129C109.006 6.93392 107.722 6.74023 106.184 6.74023H100.722V30.0156H99.8252V5.84375H106.184C107.401 5.84375 108.497 5.96549 109.471 6.20898C110.445 6.45247 111.275 6.82878 111.961 7.33789C112.647 7.84701 113.173 8.49447 113.538 9.28027C113.903 10.055 114.086 10.9736 114.086 12.0361C114.086 13.0322 113.898 13.9287 113.521 14.7256C113.156 15.5225 112.619 16.1699 111.911 16.668C111.203 17.166 110.328 17.4704 109.288 17.5811L107.877 18.0791ZM107.711 30.0156H100.34L100.622 29.1191H107.711C109.072 29.1191 110.24 28.8923 111.214 28.4385C112.199 27.9847 112.957 27.3317 113.488 26.4795C114.02 25.6162 114.285 24.5869 114.285 23.3916C114.285 22.4619 114.047 21.5931 113.571 20.7852C113.106 19.9772 112.398 19.3242 111.446 18.8262C110.494 18.3281 109.305 18.0791 107.877 18.0791H103.959L103.992 17.1826H109.72L109.786 17.498C110.804 17.6198 111.717 17.9574 112.525 18.5107C113.344 19.0641 113.992 19.7669 114.468 20.6191C114.944 21.4603 115.182 22.3734 115.182 23.3584C115.182 24.7861 114.861 25.998 114.219 26.9941C113.588 27.9792 112.714 28.7318 111.596 29.252C110.478 29.7611 109.183 30.0156 107.711 30.0156ZM124.645 5.84375V30.0156H118.834V5.84375H124.645ZM138.59 5.84375L129.907 20.4531H123.632L122.935 15.1904H126.902L131.551 5.84375H138.59ZM132.547 30.0156L126.886 19.4404L131.119 15.5391L139.42 30.0156H132.547ZM146.376 21.1006L155.059 5.84375H160.886V30.0156H155.059V14.7754L146.376 30.0156H140.549V5.84375H146.376V21.1006ZM180.741 15.4395V19.9219H168.34V15.4395H180.741ZM170.282 5.84375V30.0156H164.455V5.84375H170.282ZM184.659 5.84375V30.0156H178.849V5.84375H184.659ZM208.814 17.4482V18.4277C208.814 20.276 208.554 21.9362 208.034 23.4082C207.525 24.8691 206.8 26.1198 205.859 27.1602C204.919 28.1895 203.806 28.9808 202.522 29.5342C201.239 30.0765 199.822 30.3477 198.272 30.3477C196.712 30.3477 195.284 30.0765 193.989 29.5342C192.705 28.9808 191.588 28.1895 190.636 27.1602C189.695 26.1198 188.965 24.8691 188.444 23.4082C187.935 21.9362 187.681 20.276 187.681 18.4277V17.4482C187.681 15.5999 187.935 13.9398 188.444 12.4678C188.965 10.9958 189.689 9.74512 190.619 8.71582C191.56 7.67546 192.672 6.88411 193.956 6.3418C195.251 5.78841 196.679 5.51172 198.239 5.51172C199.789 5.51172 201.205 5.78841 202.489 6.3418C203.784 6.88411 204.902 7.67546 205.843 8.71582C206.784 9.74512 207.514 10.9958 208.034 12.4678C208.554 13.9398 208.814 15.5999 208.814 17.4482ZM202.904 18.4277V17.415C202.904 16.2197 202.799 15.1683 202.589 14.2607C202.39 13.3421 202.091 12.5729 201.692 11.9531C201.294 11.3333 200.801 10.8685 200.215 10.5586C199.639 10.2376 198.981 10.0771 198.239 10.0771C197.465 10.0771 196.789 10.2376 196.214 10.5586C195.638 10.8685 195.157 11.3333 194.77 11.9531C194.382 12.5729 194.089 13.3421 193.89 14.2607C193.701 15.1683 193.607 16.2197 193.607 17.415V18.4277C193.607 19.612 193.701 20.6634 193.89 21.582C194.089 22.4896 194.382 23.2588 194.77 23.8896C195.168 24.5205 195.655 24.9964 196.23 25.3174C196.817 25.6383 197.498 25.7988 198.272 25.7988C199.014 25.7988 199.673 25.6383 200.248 25.3174C200.824 24.9964 201.305 24.5205 201.692 23.8896C202.091 23.2588 202.39 22.4896 202.589 21.582C202.799 20.6634 202.904 19.612 202.904 18.4277Z" fill="white"/>
+            </svg>
+        </div>
+        <span>АДМИНИСТРАТОРСКАЯ</span>
+    </nav>
+</header>
+
+<main class="admin-container">
+
+    <!-- Hall Management -->
+    <section class="admin-section">
+        <div class="section-header">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="40" height="40" rx="20" fill="white" stroke="#BC95D6" stroke-width="4"/>
+            </svg>       
+            <h2>УПРАВЛЕНИЕ ЗАЛАМИ</h2>
+            <button class="toggle-btn" aria-label="Свернуть/развернуть секцию">
+                <img src="svg/arrow.svg" alt="стрелка">
+            </button>
+        </div>
+
+        <div class="section-body">
+            <p>Доступные залы:</p>
+            <div class="hall-list" id="hallList">
+                <button class="icon-btn delete-hall" aria-label="Удалить зал">
+                    <img src="svg/trashcanButton.svg" alt="">
+                </button>
+            </div>            
+            <button class="primary-btn add-hall">СОЗДАТЬ ЗАЛ</button>
+        </div>
+
+        <div class="modal hidden" id="hallModal">
+            <div class="modal-content modal-hall">
+                <div class="modal-header">
+                    <span class="modal-title">ДОБАВЛЕНИЕ ЗАЛА</span>
+                    <button class="modal-close" id="closeHallModal" type="button">
+                        <img src="svg/closeButton.svg" atl="">
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="form">
+                        <div class="form-group">
+                            <label for="newNameHall" class="form-label">Название зала</label>
+                            <input type="text" id="newNameHall" class="form-input">
+                        </div>
+                    </div>
+
+                    <div class="modal-actions">
+                        <button id="confirmAddHall" class="primary-btn add-btn" type="button">ДОБАВИТЬ ЗАЛ</button>
+                        <button id="cancelAddHall" class="secondary-btn cancle-btn" type="button">ОТМЕНИТЬ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="admin-section">
+        <div class="section-header">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="40" height="40" rx="20" fill="white" stroke="#BC95D6" stroke-width="4"/>
+            </svg> 
+            <h2>КОНФИГУРАЦИЯ ЗАЛОВ</h2>
+            <button class="toggle-btn" aria-label="Свернуть/развернуть секцию">
+                <img src="svg/arrow.svg" alt="стрелка">
+            </button>
+        </div>
+
+        <div class="section-body">
+            <p>Выберите зал для конфигурации:</p>
+            <div class="tabs" id="hall-tabs"></div>
+
+            <span class="inputs-title">Укажите количество рядов и максимальное количество кресел в ряду:</span>
+
+            <div class="inputs-wrapper">
+                <div class="input-group">
+                    <span class="inputs-text">Рядов, шт</span>
+                    <input id="rowsInput" class="input-field" type="number" min="1" value="5">
+                </div>
+            
+                <div class="arrow-wrapper">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.74512 8.82422H6.71484L4.33301 5.45801L1.97754 8.82422H0L3.41895 4.39453L0.158203 0H2.11816L4.43848 3.39258L6.71484 0H8.60449L5.29102 4.42969L8.74512 8.82422Z" fill="#848484"/>
+                    </svg>                        
+                </div>
+            
+                <div class="input-group">
+                    <span class="inputs-text">Мест, шт</span>
+                    <input id="seatsInput" class="input-field" type="number" min="1" value="6">
+                </div>
+            </div>
+            
+            <div class="legend">
+                <span class="seat normal"></span>
+                <span class="seat-text">- обычные кресла</span>
+                <span class="seat vip">
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect x="0.5" y="0.5" width="25" height="25" rx="3.5" fill="#B0D6D8"/>
+                        <rect x="0.5" y="0.5" width="25" height="25" rx="3.5" fill="url(#pattern0_16_958)"/>
+                        <rect x="0.5" y="0.5" width="25" height="25" rx="3.5" stroke="#0A828A"/>
+                        <defs>
+                            <pattern id="pattern0_16_958" patternContentUnits="objectBoundingBox" width="0.115385" height="0.115385">
+                                <use xlink:href="#image0_16_958" transform="scale(0.0384615)"/>
+                            </pattern>
+                            <image id="image0_16_958" width="3" height="3" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjZFQTdBN0JEQjExNjExRTg5OEU5RThGMjMzRkNBRUFFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjZFQTdBN0JFQjExNjExRTg5OEU5RThGMjMzRkNBRUFFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NkVBN0E3QkJCMTE2MTFFODk4RTlFOEYyMzNGQ0FFQUUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NkVBN0E3QkNCMTE2MTFFODk4RTlFOEYyMzNGQ0FFQUUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4p02KSAAAAIklEQVR42mL4//8/A8O02f/BNIwBwowQEQYGxulz/gMEGADNbhWGcpgAfAAAAABJRU5ErkJggg=="/>
+                        </defs>
+                    </svg>
+                </span>
+                <span class="seat-text">- VIP кресла</span>
+                <span class="seat disabled"></span>
+                <span class="seat-text">- заблокированные (нет кресла)</span>
+            </div>
+
+            <span>Чтобы изменить вид кресла, нажмите по нему левой кнопкой мыши</span>
+
+            <div class="screen-container">
+                <span class="screen">Э К Р А Н</span>
+                <div class="hall-grid" id="hallGrid"></div>    
+            </div>      
+
+            <div class="actions">
+                <button class="secondary-btn">ОТМЕНА</button>
+                <button class="primary-btn save-btn">СОХРАНИТЬ</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="admin-section">
+        <div class="section-header">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="40" height="40" rx="20" fill="white" stroke="#BC95D6" stroke-width="4"/>
+            </svg> 
+            <h2>КОНФИГУРАЦИЯ ЦЕН</h2>
+            <button class="toggle-btn" aria-label="Свернуть/развернуть секцию">
+                <img src="svg/arrow.svg" alt="стрелка">
+            </button>
+        </div>
+
+        <div class="section-body">
+            <p>Выберите зал для конфигурации:</p>
+            <div class="tabs" id="price-hall-tabs"></div>
+
+            <span>Установите цены для типов кресел:</span>
+            <div class="price-inputs">
+                <div class="input-group price-line">
+                    <span class="inputs-text">Цена, рублей</span>
+                
+                    <div class="price-row">
+                        <input class="input-field" type="number">
+                        <span class="price-hint">
+                            за <span class="seat normal"></span>
+                            <span class="seat-text">обычные кресла</span>
+                        </span>
+                    </div>
+                </div>
+            
+                <div class="input-group price-line">
+                    <span class="inputs-text">Цена, рублей</span>
+                
+                    <div class="price-row">
+                        <input class="input-field" type="number">
+                        <span class="price-hint">
+                            за <span class="seat vip"> 
+                                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <rect x="0.5" y="0.5" width="25" height="25" rx="3.5" fill="#B0D6D8"/>
+                                    <rect x="0.5" y="0.5" width="25" height="25" rx="3.5" fill="url(#pattern0_16_958)"/>
+                                    <rect x="0.5" y="0.5" width="25" height="25" rx="3.5" stroke="#0A828A"/>
+                                <defs>
+                                    <pattern id="pattern0_16_958" patternContentUnits="objectBoundingBox" width="0.115385" height="0.115385">
+                                        <use xlink:href="#image0_16_958" transform="scale(0.0384615)"/>
+                                    </pattern>
+                                    <image id="image0_16_958" width="3" height="3" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjZFQTdBN0JEQjExNjExRTg5OEU5RThGMjMzRkNBRUFFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjZFQTdBN0JFQjExNjExRTg5OEU5RThGMjMzRkNBRUFFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NkVBN0E3QkJCMTE2MTFFODk4RTlFOEYyMzNGQ0FFQUUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NkVBN0E3QkNCMTE2MTFFODk4RTlFOEYyMzNGQ0FFQUUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4p02KSAAAAIklEQVR42mL4//8/A8O02f/BNIwBwowQEQYGxulz/gMEGADNbhWGcpgAfAAAAABJRU5ErkJggg=="/>
+                                </defs>
+                            </svg>
+                        </span>
+                            <span class="seat-text">VIP кресла</span>
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="actions">
+                <button class="secondary-btn">ОТМЕНА</button>
+                <button class="primary-btn save-btn">СОХРАНИТЬ</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="admin-section">
+        <div class="section-header">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="40" height="40" rx="20" fill="white" stroke="#BC95D6" stroke-width="4"/>
+            </svg>              
+            <h2>СЕТКА СЕАНСОВ</h2>
+            <button class="toggle-btn" aria-label="Свернуть/развернуть секцию">
+                <img src="svg/arrow.svg" alt="стрелка">
+            </button>
+        </div>
+    
+        <div class="section-body">
+            
+            <button id="confirmAdd" class="primary-btn add-movie-btn" type="button">ДОБАВИТЬ ФИЛЬМ</button>
+            <div class="modal hidden" id="movieModal">
+                <div class="modal-content modal-movie">
+                    <div class="modal-header">
+                        <span class="modal-title">ДОБАВЛЕНИЕ ФИЛЬМА</span>
+                        <button class="modal-close" id="closeHallModal" type="button">
+                            <img src="svg/closeButton.svg" atl="">
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="form">
+                            <div class="form-group">
+                                <label for="movieTitle" class="form-label">Название фильма</label>
+                                <input type="text" id="movieTitle" class="form-input" placeholder="Например, «Гражданин Кейн»">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="movieDuration" class="form-label">Продолжительность (в минутах)</label>
+                                <input type="number" id="movieDuration" class="form-input" min="1">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="movieDescription" class="form-label">Описание фильма</label>
+                                <textarea id="movieDescription" class="form-input textarea" rows="4"></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="movieCountry" class="form-label">Страна</label>
+                                <input type="text" id="movieCountry" class="form-input">
+                            </div>
+                        </div>
+
+                        <div class="modal-actions">
+                            <button id="confirmAddMovie" class="primary-btn add-btn" type="button">
+                                ДОБАВИТЬ ФИЛЬМ
+                            </button>
+                            <button id="addPosterBtn" class="secondary-btn add-poster" type="button">
+                                ЗАГРУЗИТЬ ПОСТЕР
+                            </button>
+                            <input 
+                                type="file" 
+                                id="moviePoster" 
+                                accept="image/*" 
+                                hidden
+                            >
+                            <button id="cancelAddMovie" class="secondary-btn cancle-btn" type="button">
+                                ОТМЕНИТЬ
+                            </button>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="movies-list">
+                <div class="movie-card" draggable="true"></div> 
+            </div>
+            <div class="timeline-container">
+                <div class="trash">🗑</div>
+                <div class="timelines-wrapper">
+                </div>
+            </div>            
+            
+        </div>
+    </section>
+    
+    <!-- МОДАЛЬНОЕ ОКНО -->
+    <div class="modal hidden" id="sessionModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-title">ДОБАВЛЕНИЕ СЕАНСА</span>
+                <button class="modal-close" id="closeModal" type="button">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="22" height="22" fill="url(#pattern0_59_41)"/>
+                        <defs>
+                        <pattern id="pattern0_59_41" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0_59_41" transform="scale(0.00390625)"/>
+                        </pattern>
+                        <image id="image0_59_41" width="256" height="256" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAMAAABrrFhUAAABnlBMVEUAAAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////aMUgUAAAAiXRSTlMAAQIDBAUGBwgJCgsMDQ4PERMUFRcYGRscHR8gISIjJSYnKistLi8wMjM0OD9AQUNFR0lKTU9QUlRWV1hbXGFiZmdrbG1vcHFzdHV3eXt+f4CIiYuMjpKVmJqeoKKjpaaoqquvsLK0t7m6vL7AwcPFyszOz9PV2tze4OLk5ujp6+3v8fP19/n7/QNGy6MAAAdiSURBVHja5d0JW5RVGMbxMwzIoqKYpraapeaCtu9llhVuWVm2qFmplalFlmLmgkMCz7eOTYKYmfcsz3Kfw/kC9/n9Hby83nEG5wJPV1//yhUO8tR6VvX31iUHnjxwaYJmzh9Hn+2Ewvft/eLm7NUa37++QWbiwzFaeCZProfhb/1p0dXoxsvsL4T6EC09p1ZC8DcNL71a4znejcduU7Mz8TzAT/7Rplejy5x/Om9Qq3OyZuzv/rXV1ca2sI0cptbnfN3Uv2qkzd12M40cp3bnF8sCq2+1vduggt+0QIWfp0CV37BApZ+jQLXfrICHP72Aj9+ogJc/tYCf36SApz+tgK/foIC3P6WAv1+9QIA/vkCIX7lAkD+2QJhftUCgP65A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"/>
+                        </defs>
+                    </svg>                        
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <div class="form">
+                    <div class="form-group">
+                        <label for="hallName" class="form-label">Название зала:</label>
+                        <input type="text" id="hallName" class="form-input">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="movieName" class="form-label">Название фильма:</label>
+                        <input type="text" id="movieName" class="form-input">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="startTime" class="form-label">Время начала:</label>
+                        <input type="text" id="startTime" class="form-input">
+                    </div>
+                </div>
+
+                 <!-- Кнопки действий -->
+                <div class="modal-actions">
+                    <button id="confirmAdd" class="primary-btn add-btn" type="button">ДОБАВИТЬ</button>
+                    <button id="modalCancelBtn" class="secondary-btn cancle-btn" type="button">ОТМЕНИТЬ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ОТКРЫТЬ ПРОДАЖИ -->
+    <section class="admin-section">
+        <div class="section-header">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="40" height="40" rx="20" fill="white" stroke="#BC95D6" stroke-width="4"/>
+            </svg>
+            <h2>ОТКРЫТЬ ПРОДАЖИ</h2>
+            <button class="toggle-btn" aria-label="Свернуть/развернуть секцию">
+                <img src="svg/arrow.svg" alt="стрелка">
+            </button>
+        </div>
+
+        <div class="section-body center">
+            <p>Выбирите зал для открытия/закрытия продаж:</p>
+            <div class="tabs" id="sales-hall-tabs"></div>
+            <span class="sales-section-text">Всё готово к открытию</span>
+            <button id="open-sales-btn" class="primary-btn large">
+            </button>             
+        </div>
+    </section>
+</main>
+
+<script src="js/admin.js"></script>
+</body>
+</html>
