@@ -1,4 +1,4 @@
-https://ksessha.github.io/Kinosite/#
+https://ksessha.github.io/Kinosite/
 
 Стек технологий: 
   HTML5 – основная разметка страницы, структура интерфейса и модальных окон.
