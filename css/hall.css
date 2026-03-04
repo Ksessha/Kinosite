@@ -3,6 +3,12 @@
     margin: 0;
     padding: 0;
 }
+
+html, body {
+    height: 100%;
+    min-height: 100%;
+}
+
 body {
     background-image: url("../images/background/cc92c00e77987fbb92422660c7bd27edcefc669d.jpg");
     font-family: 'Roboto', sans-serif;
@@ -10,6 +16,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+    min-height: 100vh;
 }
 
 .site-header {
@@ -26,7 +33,7 @@ body {
 
 .hall-wrapper {
     max-width: 990px;
-    height: 573px;
+    min-height: 573px;
     margin: 0 auto;
     background: #f3ebe1;
 }
@@ -39,20 +46,22 @@ body {
     color: #000000;
     font-size: 16px;
     font-weight: 700;
+    display: block;
+    margin-bottom: 7px;
 }
 
 .session-time {
     color: #000000;
     font-size: 14px;
     font-weight: 300;
-    margin-top: 7px;
+    margin-bottom: 8px;
 }
 
 .hall-name {
     color: #000000;
     font-size: 16px;
     font-weight: 700;
-    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 .black-hall {
@@ -62,20 +71,9 @@ body {
     background-repeat: no-repeat;
     background-position: center 20px;
     background-size: 284px 20px;
-    padding-top: 40px;
-    padding-bottom: 15px;
+    padding: 40px 15px 15px;
     margin-bottom: 30px;
 }
-
-.hall-screen {
-    margin: 20px auto 10px;
-    text-align: center;
-    font-size: 12px;
-    color: #aaa;
-    border-bottom: 1px solid #aaa;
-    width: 60%;
-}
-
 
 .hall-scheme {
     display: grid;
@@ -83,7 +81,9 @@ body {
     gap: 6px;
     justify-content: center;
     margin: 20px auto;
-    width: fit-content;
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 10px 0;
 }
 
 .seat {
@@ -93,6 +93,7 @@ body {
     cursor: pointer;
     border: 1px solid #525252;
     border-radius: 4px;
+    min-width: 16px;
 }
 
 .seat.vip {
@@ -115,11 +116,11 @@ body {
     grid-auto-flow: column;
     gap: 12px 32px;
     justify-content: center;
-    margin: 30px 0;
     font-size: 14px;
     color: #FFFFFF;
-    margin-bottom: 15px;
+    margin: 30px 0 15px;
     font-weight: 300;
+    flex-wrap: wrap;
 }
 
 .legend > div {
@@ -130,6 +131,8 @@ body {
 
 .legend .seat {
     margin-right: 6px;
+    width: 20px;
+    height: 20px;
 }
 
 .book-btn {
@@ -143,4 +146,85 @@ body {
     cursor: pointer;
     font-size: 14px;
     box-shadow: 0 3px 3px rgba(0,0,0,.24);
+}
+
+
+@media (max-width: 991px) {
+    .site-header {
+        padding: 0 20px;
+    }
+
+    .legend {
+        gap: 16px 20px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 767px) {
+    .site-header {
+        padding: 0 15px;
+    }
+
+    .hall-scheme {
+        gap: 4px;
+    }
+
+    .legend {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-flow: row;
+        gap: 12px;
+        justify-items: start;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-header {
+        padding: 0 10px;
+    }
+
+    .black-hall {
+        padding: 30px 8px 15px;
+    }
+
+    .hall-scheme {
+        gap: 3px;
+        justify-content: flex-start;
+    }
+
+    .legend {
+        gap: 10px;
+        font-size: 12px;
+        justify-items: start;
+        padding: 0 30px;
+    }
+
+    .legend > div {
+        white-space: normal;
+        word-break: keep-all;
+    }
+
+    .legend .seat {
+        width: 14px;
+        height: 14px;
+        margin-right: 4px;
+    }
+
+    .movie-title {
+        font-size: 18px;
+    }
+
+    .session-time {
+        font-size: 15px;
+    }
+
+    .hall-name {
+        font-size: 18px;
+    }
+
+    .book-btn {
+        width: 100%;
+        max-width: 300px;
+        padding: 12px 20px;
+    }
 }
